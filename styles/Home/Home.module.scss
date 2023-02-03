@@ -1,0 +1,130 @@
+// @import "../variables";
+
+// -------------------------------------------------------------
+// ----------------- Beskrivning av sidan: ---------------------
+// --------------------- Startsidan ----------------------------
+// -------------------------------------------------------------
+.heroImg {
+  height: 90vh;
+  background-image: url("/images/luke-hodde-OPZLe7zcCKE-unsplash_desktop.webp");
+  background-size: cover;
+  background-position: top;
+  @media screen and (max-width: 1024px) {
+    background-image: url("/images/luke-hodde-OPZLe7zcCKE-unsplash_mobile.webp");
+  }
+  @media screen and (min-width: 2000px) {
+    background-image: url("/images/luke-hodde-OPZLe7zcCKE-unsplash_large_screen.webp");
+  }
+}
+.heroSection {
+  height: 90vh;
+  background-color: transparent;
+  background-image: url("/images/Snowflake.webp"),
+    url("/images/Snowflake_smaller.webp"), url("/images/Snowflake.webp"),
+    url("/images/Snowflake.webp"), url("/images/Snowflake_smaller.webp"),
+    url("/images/Snowflake_smaller.webp"), url("/images/Snowflake.webp"),
+    url("/images/Snowflake_smaller.webp");
+  background-repeat: no-repeat;
+  animation: snow 30s linear;
+  background-color: opacity(0.8);
+  text-align: center;
+  header {
+    text-align: left;
+  }
+  .logotype {
+    margin-top: 50px;
+    @media screen and (max-width: 767px) {
+      width: 250px;
+      height: auto;
+      margin-top: 75px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      margin-top: 150px;
+    }
+    @media screen and (min-width: 2000px) {
+      margin-top: 150px;
+      width: 550px;
+      height: auto;
+    }
+    @media screen and (min-width: 3500px) {
+      margin-top: 150px;
+      width: 1000px;
+      height: auto;
+    }
+  }
+}
+
+// Animation för snöflingorna
+@keyframes snow {
+  0% {
+    background-position: 5% 10vh, 11% 50vh, 15% 10vh, 85% 40vh, 80% 11vh,
+      90% 10vh, 35% -200px, 70% -100px;
+  }
+  50% {
+    background-position: 6% 25%, 11% 100%, 16% 40%, 84% 80%, 79% 50%, 89% 32%,
+      36% 20%, 70% 200px;
+  }
+  100% {
+    background-position: 5% 100%, 12% 120%, 15% 90%, 85% 120%, 80% 100%, 90% 50%,
+      35% 40%, 70% 500px;
+  }
+}
+.welcomeSection {
+  color: $white;
+  padding-top: 30px;
+}
+.boxWrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 95%;
+  }
+  article {
+    width: 270px;
+    height: 230px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: $transparentWhite;
+    text-align: left;
+    padding: 3%;
+    border: $middleGreen 5px solid;
+    &:hover {
+      background-color: $white;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      height: 180px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      height: 260px;
+      width: 200px;
+      margin-top: 30px;
+      padding: 1.5%;
+    }
+    @media screen and (min-width: 1550px) {
+      padding: 2%;
+    }
+    @media screen and (min-width: 3500px) {
+      height: 250px;
+      width: 500px;
+    }
+    p {
+      @media screen and (max-width: 768px) {
+        margin-top: 15px;
+      }
+    }
+    .secondParagraph {
+      margin-top: 25px;
+    }
+  }
+}

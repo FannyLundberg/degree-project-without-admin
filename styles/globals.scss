@@ -1,0 +1,225 @@
+// -------------------------------------------------------------
+// ----------------- Beskrivning av sidan: ---------------------
+// -------------------- Global styling -------------------------
+// -------------------------------------------------------------
+
+// ******* Hela sidan *******
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  padding: 0;
+  color: $black;
+  background-color: $black;
+}
+
+// Scollbar
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #b4b2b2;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #fbfbfb33;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fbfbfb5e;
+}
+
+// ******** Header ********
+header {
+  height: 10vh;
+  text-transform: uppercase;
+  display: flex;
+  border-bottom: solid 1px $transparentWhite;
+  color: $white;
+  background-color: #1e191e40;
+  a {
+    color: $white;
+  }
+}
+.imgSection {
+  width: 30%;
+  align-self: center;
+  margin-left: 15px;
+}
+.navSection {
+  width: 70%;
+}
+
+// ******** Meny ********
+.hamburger {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+  }
+}
+#menuSpanTop,
+#menuSpanMiddle,
+#menuSpanBottom {
+  width: 38px;
+  height: 5px;
+  background-color: $white;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  display: block;
+}
+
+// Animation för att öppna hamburgermenyn
+#menuSpanTop.open {
+  transform: rotate(-45deg) translate(-3px, 11px);
+  transition: 0.3s;
+}
+#menuSpanMiddle.open {
+  opacity: 0;
+}
+#menuSpanBottom.open {
+  transform: rotate(45deg) translate(-3px, -11px);
+  transition: 0.3s;
+}
+
+// Animation för att stänga hamburgermenyn
+#menuSpanTop.closed {
+  transform: rotate(0deg);
+  transition: 0.35s;
+}
+#menuSpanMiddle.closed {
+  transform: opacity(1);
+  transition: 0.75s;
+}
+#menuSpanBottom.closed {
+  transform: rotate(0deg);
+  transition: 0.35s;
+}
+
+// Öppen meny
+nav ul.open {
+  position: absolute;
+  height: 100vh;
+  width: 80%;
+  right: 0;
+  background-color: $black;
+  padding-top: 15%;
+  z-index: 1;
+}
+nav li.open {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin-top: 25px;
+  }
+}
+
+// Stängd meny
+nav ul.closed {
+  display: none;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 1vh;
+}
+nav li.closed {
+  display: none;
+  @media screen and (min-width: 769px) {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 35px;
+    a {
+      &:hover {
+        text-decoration: underline;
+        font-weight: 600;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// ******** Main ********
+main {
+  min-height: 90vh;
+  max-height: fit-content;
+  background-color: $transparentBlack;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    text-align: left;
+  }
+}
+h3 {
+  margin-top: 35px;
+}
+h4 {
+  margin-top: 5px;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  &::selection {
+    background-color: $darkGreen;
+    color: $white;
+  }
+}
+
+// ******** Footer ********
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $black;
+  color: $white;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-top: solid 1px $transparentWhite;
+  a {
+    color: $white;
+  }
+}
+
+// ******** Länkar ********
+a {
+  text-decoration: none;
+  color: $darkGreen;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+  &::selection {
+    background-color: $black;
+    color: $white;
+  }
+  // Animation vid hover
+  svg {
+    transition: all 0.55s ease-out;
+    &:hover {
+      transform: translate(5px);
+    }
+  }
+}

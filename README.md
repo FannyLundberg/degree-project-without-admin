@@ -14,7 +14,7 @@ This is a degree project as a part of my education at Medieinstitutet. It is bui
 
 Project is built for a voluntary organization, **Julklappshjälpen Värmdö**. The organization is helping people that can’t afford Christmas gifts for their children. It is dependent of giving people and companies. Today they only have a Facebook group for communication, therefor this project is to give them a website so that more people can read about this amazing organization. 
 
-Please observe that this is a copy of the real project. This version/copy is without the admin section.
+**Please observe that this is a copy of the real project. This version/copy is without the admin section.**
 
 &nbsp;
 
@@ -62,9 +62,9 @@ Project is tested with Cypress.
 
 ### Configured and passing tests
 
-- Functionality for login
-  - Able to login in with right credentials
-  - Not able to login with wrong credentials
+- ~~Functionality for login~~
+  - ~~Able to login in with right credentials~~
+  - ~~Not able to login with wrong credentials~~
 - Functionality for navigation
 - Specific elements (each page should have...)
   - a header

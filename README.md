@@ -18,7 +18,7 @@ Project is built for a voluntary organization, **Julklappshjälpen Värmdö**. T
 
 &nbsp;
 
-## Built with
+## Tech stack
 
 - Next.js
 - TypeScript
@@ -28,31 +28,37 @@ Project is built for a voluntary organization, **Julklappshjälpen Värmdö**. T
 - Formik
 - Canvas
 - React-loading-skeleton
+- Figma
+- Cypress
+- Vercel
 
 &nbsp;
 
 ## Run locally
 
 
-Write in terminal:
-
+1. Clone repo:
 ```
-git clone https://github.com/FannyLundberg/degree-project.git
+git clone https://github.com/FannyLundberg/degree-project-without-admin.git
 ```
 
-When opened the project:
+2. Go to projects directory 
+(Windows / Mac):
+```
+cd degree-project-without-admin / ls degree-project-without-admin
+```
 
+3. When opened the project:
 ```
 npm install
 ```
 
-When installation is done:
-
+4. When installation is done:
 ```
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 &nbsp;
 
@@ -60,11 +66,23 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Project is tested with Cypress.
 
-### Configured and passing tests
+### To run tests locally
 
-- ~~Functionality for login~~
-  - ~~Able to login in with right credentials~~
-  - ~~Not able to login with wrong credentials~~
+
+Project needs to be running:
+```
+npm run dev
+```
+
+Start Cypress:
+```
+npm run cypress:open
+```
+
+Click "E2E Testing" and then push button "Start E2E Testing in Chrome". Choose file "spec.ts". The tests will now run automatically.
+
+
+### Configured and passing tests
 - Functionality for navigation
 - Specific elements (each page should have...)
   - a header

@@ -42,10 +42,9 @@ Project is built for a voluntary organization, **Julklappshjälpen Värmdö**. T
 git clone https://github.com/FannyLundberg/degree-project-without-admin.git
 ```
 
-2. Go to projects directory 
-(Windows / Mac):
+2. Go to projects directory:
 ```
-cd degree-project-without-admin / ls degree-project-without-admin
+cd degree-project-without-admin
 ```
 
 3. When opened the project:

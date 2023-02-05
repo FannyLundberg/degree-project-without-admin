@@ -68,20 +68,27 @@ Project is tested with Cypress.
 ### To run tests locally
 
 
-Project needs to be running:
+1. Project needs to be running:
 ```
 npm run dev
 ```
 
-Start Cypress:
+2. Start Cypress:
 ```
 npm run cypress:open
 ```
 
-Click "E2E Testing" and then push button "Start E2E Testing in Chrome". Choose file "spec.ts". The tests will now run automatically.
+3. Click "E2E Testing" 
+4. Press "Start E2E Testing in Chrome"-button
+5. Choose file "spec.ts"
 
+The tests will now run automatically
 
 ### Configured and passing tests
+
+- Functionality for login
+  - Able to login in with right credentials
+  - Not able to login with wrong credentials
 - Functionality for navigation
 - Specific elements (each page should have...)
   - a header

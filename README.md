@@ -80,7 +80,7 @@ npm run cypress:open
 
 3. Click "E2E Testing" 
 4. Press "Start E2E Testing in Chrome"-button
-5. Choose file "spec.ts"
+5. Choose file "spec.cy.ts"
 
 The tests will now run automatically
 
